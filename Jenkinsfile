@@ -4,9 +4,12 @@ pipeline {
     stages {
 
         stage('Clone Code') {
-            steps {
-                git 'https://github.com/charansai107/poc7.git'
-            }
+            
+ steps {
+        git branch: 'main',
+            url: 'https://github.com/charansai107/poc7.git'
+    }
+
         }
 
         stage('Deploy Using Ansible') {
